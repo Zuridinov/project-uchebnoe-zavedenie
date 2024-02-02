@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="spacer">
+      <button class="login-btn">
+        <img src="/icons/Войти.svg" alt="Войти" class="login-icon" />
+        Войти
+      </button>
+    </div>
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item">
+          <a href="#">Интерфейс</a>
+        </li>
+        <li class="header__item">
+          <a href="#">Соц.сети</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="active">Журналы</a>
+        </li>
+        <li class="header__item">
+          <a href="#">Импорт</a>
+        </li>
+        <li class="header__item">
+          <a href="#">Экспорт</a>
+        </li>
+        <li class="header__item">
+          <a href="#">Пользователи</a>
+        </li>
+        <li class="header__item">
+          <a href="#">Email ящики</a>
+        </li>
+        <li class="header__item">
+          <a href="#">Ключи.Пароли</a>
+        </li>
+        <li class="header__item">
+          <a href="#">Разное</a>
+        </li>
+      </ul>
+    </header>
+    <section class="subheader">
+      <ul class="subheader__items">
+        <li class="subheader__item">
+          <a href="#">
+            <img src="/icons/bi_card-list.svg" alt="" /> <br />
+            ОБЪЯВЛЕНИЯ</a
+          >
+        </li>
+        <li class="subheader__item">
+          <a href="#"
+            ><img src="/icons/material-symbols_person-search.svg" alt="" />
+            <br />
+            ВАКАНСИИ</a
+          >
+        </li>
+        <li class="subheader__item">
+          <a href="#"
+            ><img src="/icons/ic_baseline-people.svg" alt="" />СОИСКАТЕЛИ</a
+          >
+        </li>
+        <li class="subheader__item">
+          <a href="#"
+            ><img src="/icons/ic_baseline-email.svg" alt="" />EMAIL РАССЫЛКА</a
+          >
+        </li>
+        <li class="subheader__item">
+          <a href="#"
+            ><img src="/icons/clarity_talk-bubbles-solid.svg" alt="" />
+            ОТКЛИКИ</a
+          >
+        </li>
+        <li class="subheader__item">
+          <a href="#"
+            ><img src="/icons/icon-park-solid_edit-name.svg" alt="" />ФИО</a
+          >
+        </li>
+        <li class="subheader__item">
+          <a href="#"
+            ><img src="/icons/ph_student-fill.svg" alt="" />УЧЕБНЫЕ ЗАВЕДЕНИЯ</a
+          >
+        </li>
+        <li class="subheader__item">
+          <a href="#"
+            ><img src="/icons/foundation_address-book.svg" alt="" />АДРЕСА</a
+          >
+        </li>
+        <li class="subheader__item">
+          <a href="#"><img src="/icons/mdi_company.svg" alt="" />КОМПАНИИ</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="main">
+      <div class="general__forms">
+        <button class="dataFrom">
+          DATA ОТ <input type="date" id="dateTo" name="dateTo" required />
+        </button>
+        <button class="dataFrom">
+          DATA ДО <input type="date" id="dateTo" name="dateTo" />
+        </button>
+        <button class="dataFrom">+ ADD A NEW ONE</button>
+        <button class="dataFrom">
+          <img src="/icons/Decelect.svg" alt="" /> DESELECT
+        </button>
+        <button class="dataFrom">
+          <img src="/icons/In total.svg" alt="" /> IN TOTAL: <span>298732</span>
+        </button>
+        <button class="dataFrom">
+          <img src="/icons/Экспорт.svg" alt="" /> EXPORT
+        </button>
+      </div>
+      <div class="container">
+        <div class="container-list">
+          <span>Тип учебного заведения</span>
+          <div class="form-container">
+            <form>
+              <button type="button" class="close-button" onclick="closeForm()">
+                <img src="/icons/Иконка убрать.svg" alt="" />
+              </button>
+              <input
+                type="text"
+                id="autocompleteInput"
+                class="autocomplete-input"
+                list="datalistOptions"
+                autocomplete="off"
+                placeholder="Высшие-специальные учебные заведения"
+              />
+              <datalist id="datalistOptions">
+                <option value="Опция 1"></option>
+                <option value="Опция 2"></option>
+                <option value="Опция 3"></option>
+                <option value="Опция 4"></option>
+                <option value="Опция 5"></option>
+              </datalist>
+            </form>
+          </div>
+        </div>
+        <div class="container-list">
+          <span>Регион учебных заведений</span>
+          <div class="form-container">
+            <form>
+              <button type="button" class="close-button" onclick="closeForm()">
+                <img src="/icons/Иконка убрать.png" alt="" />
+              </button>
+              <input
+                type="text"
+                id="autocompleteInput"
+                class="autocomplete-input"
+                list="datalistOptions"
+                autocomplete="off"
+                placeholder="Нижегородская область"
+              />
+              <datalist id="datalistOptions">
+                <option value="Опция 1"></option>
+                <option value="Опция 2"></option>
+                <option value="Опция 3"></option>
+                <option value="Опция 4"></option>
+                <option value="Опция 5"></option>
+              </datalist>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="search-container">
+          <span class="search-label">Укажите страницу:</span>
+          <input type="number" class="page-input" />
+          <button type="button" class="go-button" onclick="goToPage()">
+            Go
+          </button>
+        </div>
+
+        <ul class="pagination">
+          <li class="pagination-item"><<</li>
+          <li class="pagination-item">First</li>
+          <li class="pagination-item">1</li>
+          <li class="pagination-item">2</li>
+          <li class="pagination-item">3</li>
+          <li class="pagination-item">4</li>
+          <li class="pagination-item">5</li>
+          <li class="pagination-item">6</li>
+          <li class="pagination-item">7</li>
+          <li class="pagination-item">8</li>
+          <li class="pagination-item">9</li>
+          <li class="pagination-item">10</li>
+          <li class="pagination-item">11</li>
+          <li class="pagination-item dots">...</li>
+          <li class="pagination-item">23</li>
+          <li class="pagination-item">Next</li>
+          <li class="pagination-item">>></li>
+        </ul>
+      </div>
+      <h2 class="table-title">Учебные заведения</h2>
+      <div class="general__forms">
+        <table>
+          <thead>
+            <tr>
+              <th class="row-number parent">№</th>
+              <th class="row-inn parent">ИНН</th>
+              <th class="row-status parent">Статус/Дата ликв.</th>
+              <th class="row-name parent">Название без ЮФ</th>
+              <th class="row-short-name parent">Сокращенное название</th>
+              <th class="row-full-name parent">Полное название</th>
+              <th class="row-address parent">Адрес</th>
+              <th class="row-branches parent">Филиалы</th>
+              <th class="row-edit parent">EDIT</th>
+              <th class="row-delete parent">DEL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="even-row">
+              <td class="row-number child"></td>
+              <td class="row-inn child">
+                <img src="/icons/Поиск.png" alt="" />
+              </td>
+              <td class="row-status child">
+                Действующее<img src="/icons/Стрелка.png" alt="" />
+              </td>
+              <td class="row-name child">
+                <img src="/icons/Поиск.png" alt="" />
+              </td>
+              <td class="row-short-name child">
+                <img src="/icons/Поиск.png" alt="" />
+              </td>
+              <td class="row-full-name child">
+                <img src="/icons/Поиск.png" alt="" />
+              </td>
+              <td class="row-address child">
+                <img src="/icons/Поиск.png" alt="" />
+              </td>
+              <td class="row-branches child"></td>
+              <td class="row-edit child">
+                <a href="#"></a>
+              </td>
+              <td class="row-delete child"><a href="#"></a></td>
+            </tr>
+            <tr class="even-row">
+              <td class="row-number child"></td>
+              <td class="row-inn child">5258024460</td>
+              <td class="row-status child">
+                <span>Действующее</span>
+              </td>
+              <td class="row-name child">НМК</td>
+              <td class="row-short-name child">ГБПОУ НО НМК</td>
+              <td class="row-full-name child">
+                Государственное бюджетное профессиональное образовательное
+                учреждение Нижегородской области "Нижегородский медицинский
+                колледж"
+              </td>
+              <td class="row-address child">
+                г Нижний Новгород, ул Июльских Дней, д 8
+              </td>
+              <td class="row-branches child">5</td>
+              <td class="row-edit child">
+                <a href="#" data-toggle-for="#pop-change-s"
+                  ><img src="/icons/Редактировать.svg" alt=""
+                /></a>
+              </td>
+              <td class="row-delete child">
+                <a href="#"><img src="/icons/Удалить.svg" alt="" /></a>
+              </td>
+            </tr>
+            <tr class="even-row">
+              <td class="row-number child"><span class="first">1</span></td>
+              <td class="row-inn child">5209004535</td>
+              <td class="row-status child">
+                <span>31 декабря 2013 г.</span>
+              </td>
+              <td class="row-name child">ВМУ(Т)</td>
+              <td class="row-short-name child">ГБОУ СПО НО "ВМУ(Т)</td>
+              <td class="row-full-name child">
+                Государственное бюджетное образовательное учреждение среднего
+                профессионального образования нижегородской области "Ветлужское
+                медицинское училище (техникум)"
+              </td>
+              <td class="row-address child">
+                Нижегородская область, г. Ветлуга, ул. Ленина, д.4
+              </td>
+              <td class="row-branches child"></td>
+              <td class="row-edit child">
+                <a href="#" data-toggle-for="#pop-change-s"
+                  ><img src="/icons/Редактировать.svg" alt=""
+                /></a>
+              </td>
+              <td class="row-delete child">
+                <a href="#"><img src="/icons/Удалить.svg" alt="" /></a>
+              </td>
+            </tr>
+            <tr class="even-row">
+              <td class="row-number child">2</td>
+              <td class="row-inn child">5262034750</td>
+              <td class="row-status child">
+                <span>Действующее</span>
+              </td>
+              <td class="row-name child">НРТК</td>
+              <td class="row-short-name child">ГБПОУ "НРТК"</td>
+              <td class="row-full-name child">
+                Государственное бюджетное профессиональное образовательное
+                учреждение "Нижегородский радиотехнический колледж"
+              </td>
+              <td class="row-address child">
+                г Нижний Новгород, ул Студенческая, д. 6
+              </td>
+              <td class="row-branches child"></td>
+              <td class="row-edit child">
+                <a href="#" data-toggle-for="#pop-change-s"
+                  ><img src="/icons/Редактировать.sng" alt=""
+                /></a>
+              </td>
+              <td class="row-delete child">
+                <a href="#"><img src="/icons/Удалить.sng" alt="" /></a>
+              </td>
+            </tr>
+            <tr class="even-row">
+              <td class="row-number child">3</td>
+              <td class="row-inn child">5262034831</td>
+              <td class="row-status child">
+                <span>Действующее</span>
+              </td>
+              <td class="row-name child">НАТТ</td>
+              <td class="row-short-name child">ГБПОУ "НАТТ"</td>
+              <td class="row-full-name child">
+                Государственное бюджетное профессиональное образовательное
+                учреждение "Нижегородский автотранспортный техникум"
+              </td>
+              <td class="row-address child">
+                г.Нижний Новгород, ул Невзоровых, д. 34
+              </td>
+              <td class="row-branches child"></td>
+              <td class="row-edit child">
+                <a href="#" data-toggle-for="#pop-change-s"
+                  ><img src="/icons/Редактировать.sng" alt=""
+                /></a>
+              </td>
+              <td class="row-delete child">
+                <a href="#"><img src="/icons/Удалить.svg" alt="" /></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container">
+        <div class="search-container">
+          <span class="search-label">Укажите страницу:</span>
+          <input type="number" class="page-input" />
+          <button type="button" class="go-button" onclick="goToPage()">
+            Go
+          </button>
+        </div>
+
+        <ul class="pagination">
+          <li class="pagination-item"><<</li>
+          <li class="pagination-item">First</li>
+          <li class="pagination-item">1</li>
+          <li class="pagination-item">2</li>
+          <li class="pagination-item">3</li>
+          <li class="pagination-item">4</li>
+          <li class="pagination-item">5</li>
+          <li class="pagination-item">6</li>
+          <li class="pagination-item">7</li>
+          <li class="pagination-item">8</li>
+          <li class="pagination-item">9</li>
+          <li class="pagination-item">10</li>
+          <li class="pagination-item">11</li>
+          <li class="pagination-item dots">...</li>
+          <li class="pagination-item">23</li>
+          <li class="pagination-item">Next</li>
+          <li class="pagination-item">>></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="popup" id="pop-change-s">
+      <div class="popup-container">
+        <div class="popup-content">
+          <section class="educational-popup">
+            <h2 class="d-flex justify-content-between align-items-center p-3">
+              Изменить учебное заведение
+              <button
+                type="button"
+                data-toggle-for="#pop-change-s"
+                class="btn-close"
+              ></button>
+            </h2>
+
+            <div class="popup-date">
+              <p>Дата</p>
+              <span class="date">12.11.2023</span>
+            </div>
+            <div class="popup-name">
+              <p>ФИО Оператора</p>
+              <div class="name">Иван Иванов</div>
+            </div>
+          </section>
+
+          <section class="popup-wrapper">
+            <div class="info-block">
+              <p>ИНН</p>
+              <div class="popup_value">5258024460</div>
+            </div>
+            <div class="info-block">
+              <p>Статус/Дата ликв.</p>
+              <div class="popup_value">Действующее</div>
+            </div>
+            <div class="info-block">
+              <p>Название без ЮФ</p>
+              <div class="popup_value">НМК</div>
+            </div>
+            <div class="info-block">
+              <p>Сокращеное название</p>
+              <div class="popup_value">ГБПОУ НО НМК</div>
+            </div>
+            <div class="info-block">
+              <p>Полное название.</p>
+              <div class="popup_value">
+                Государственное бюджетное профессиональное образовательное
+                учреждение Нижегородской области "Нижегородский медицинский
+                колледж"
+              </div>
+            </div>
+            <div class="info-block">
+              <p>Адрес</p>
+              <div class="popup_value">
+                г Нижний Новгород, ул Июльских Дней, д 8
+              </div>
+            </div>
+            <div class="info-block">
+              <p>Предыдущее ИНН</p>
+              <div class="popup_value">5258024460</div>
+            </div>
+            <div class="info-block">
+              <p>Статус/Дата ликв.</p>
+              <div class="popup_value">Действующее</div>
+            </div>
+            <div class="info-block">
+              <p>Название без ЮФ</p>
+              <div class="popup_value">Введите</div>
+            </div>
+            <div class="info-block">
+              <p>Сокращеное название</p>
+              <div class="popup_value">ГБПОУ НО НМК</div>
+            </div>
+            <div class="info-block">
+              <p>Полное название.</p>
+              <div class="popup_value">
+                Государственное бюджетное профессиональное образовательное
+                учреждение Нижегородской области "Нижегородский медицинский
+                колледж"
+              </div>
+            </div>
+            <div class="info-block">
+              <p>Адрес</p>
+              <div class="popup_value">
+                г Нижний Новгород, ул Июльских Дней, д 8
+              </div>
+            </div>
+
+            <p class="popup-title">Альтернативное название №1</p>
+
+            <div class="info-block">
+              <p>Название без ЮФ</p>
+              <div class="popup_value">Ветлужское медицинское училище</div>
+            </div>
+            <div class="info-block">
+              <p>Сокращеное название</p>
+              <div class="popup_value"></div>
+            </div>
+            <div class="info-block">
+              <p>Полное название</p>
+              <div class="popup_value"></div>
+            </div>
+            <div class="info-block">
+              <p>Статус/Дата ликв.</p>
+              <div class="popup_value">1957</div>
+            </div>
+            <div class="info-block">
+              <p>Название без ЮФ</p>
+              <div class="popup_value">Ветлужское медицинское училище</div>
+            </div>
+            <div class="info-block">
+              <p>Сокращеное названиес</p>
+              <div class="popup_value"></div>
+            </div>
+            <div class="info-block">
+              <p>Полное название</p>
+              <div class="popup_value"></div>
+            </div>
+            <div class="info-block">
+              <p>Статус/Дата ликв.</p>
+              <div class="popup_value">1957</div>
+            </div>
+
+            <button class="button-add">+ Добавить алтернативное</button>
+          </section>
+
+          <section class="popup-footer">
+            <button class="save">Сохранить</button>
+            <button class="back">Отмена</button>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="scripts/dist/index.js"></script>
+  </body>
+</html>
